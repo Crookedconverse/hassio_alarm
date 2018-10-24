@@ -1,24 +1,22 @@
 # Home Assistant - Custom Alarm Interface!
-## Intro :-)
-<img align="right" width="376.5" height="525" src="https://github.com/gazoscalvertos/Hass-Custom-Alarm/blob/master/BTC.png">
 
-### Branch DEV:
-Hi everyone, I thought it was time to show the progress of the new UI. Still very much a work in progress but its close!! There are bugs which I'll log in github to allow me to keep track, please feel free to share. Mobile responsiveness needs looking at as does a few other bits and pieces such as default HA colours, status colours, user defined codes.
+## Custom Alarm from "Gazos Calvertos" with Node Red, Unifi Cameras, TasmoAdmin, and Configurator.
 
-You may need to restart HA if the component doesnt load first time as HA will install a dependancy (ruamel.yaml)
-
-This new UI allows you to start with pretty much a blank alarm.yaml as this component can write to your yaml file!!! all you need to define is:
-
-```
-platform: bwalarm
-name: House
-```
-
-The default password to access the settings page is: HG28!!&dn
-
-There are many improvements to be made in the code still and this is very much an alpha release and should not be used in a live enviroment!!
-
-Please test and provide feedback/suggestions.
+This configuration uses the alarm system made by "Gazos Calvertos" with Node-Red which sends Unifi Video Stream Images via Slack and text message. The system will also call a phone number and using Google TTS deliver a message that the alarm has been triggered along with text messages with current images from Unifi Video cameras while also posting them in slack. 
 
 ### Features:
-- Too many to put in writing at this point!!
+-Send Unifi Video Images via node red and email
+-Call using Twilio with Google TTS
+-Hassio WatchDog
+-Posts Unifi Images to Slack via Node-Red and Drop Box
+-Post Xiaomi Temperature sensor battery levels via Node-Red to Slack
+
+
+### Make sure to set your own Local IPs on the following .yaml files.
+
+
+### Contributor: 
+- Gazos Calvertos
+  - This config uses the NEW UI branch of his alarm system with node red and tasmoAdmin
+  
+- Follow Gazos Here: https://github.com/gazoscalvertos/Hass-Custom-Alarm/tree/newUI
