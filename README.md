@@ -12,8 +12,8 @@ This configuration uses the alarm system made by "Gazos Calvertos" with Node-Red
 - Post Xiaomi Temperature sensor battery levels via Node-Red to Slack
 
 
-### Make sure to set your own Local IPs on the following .yaml files.
-
+#### Make sure to set your own Local IPs on the configuration.yaml file.
+#### Alarm Password: Password1
 
 ### Contributor: 
 - Gazos Calvertos
