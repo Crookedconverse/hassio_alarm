@@ -1,8 +1,17 @@
 # Home Assistant
 
-## Custom Alarm from "Gazos Calvertos" and integrations by Matthew Neeper using Node Red, Unifi Cameras, TasmoAdmin, Slack, DropBox, Twilio, Google TTS and Configurator.
+## Custom Alarm from "Gazos Calvertos" and integrations by Matthew Neeper using: 
+- Node Red
+- Unifi Cameras
+- TasmoAdmin
+- Slack
+- DropBox
+- Twilio
+- Google TTS
+- PushBullet
+- Configurator
 
-This configuration uses the alarm system made by "Gazos Calvertos" with Node-Red which sends Unifi Video Stream Images via Slack and text message. The system will also call a phone number and using Google TTS deliver a message that the alarm has been triggered along with text messages with current images from Unifi Video cameras while also posting them in slack. 
+This configuration uses the alarm system made by "Gazos Calvertos" with Node-Red which sends Unifi Video Stream Images via Slack and text message. The system will also call a phone number and using Google TTS deliver a message that the alarm has been triggered along with text messages with current images from Unifi Video cameras while also posting them in slack.
 
 ### Features:
 - Send Unifi Video Images via node red and email
