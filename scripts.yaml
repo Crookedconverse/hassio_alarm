@@ -1,0 +1,33 @@
+'1528490910567':
+  alias: slack
+  sequence:
+  - data:
+      data:
+        file:
+          path: /config/www/snapshot_1.jpg
+      message: Location Lobby
+      title: ALARM TRIGGERED!
+    service: notify.slack
+'1528503094994':
+  alias: Twilio
+  sequence:
+  - data:
+      message: The ALARM has been triggered! Check the cameras. This is not a test.
+        The ALARM has been triggered! Check the cameras. This is not a test. The ALARM
+        has been triggered! Check the cameras. This is not a test. The ALARM has been
+        triggered! Check the cameras. This is not a test. The ALARM has been triggered!
+        Check the cameras. This is not a test. The ALARM has been triggered! Check
+        the cameras. This is not a test. The ALARM has been triggered! Check the cameras.
+        This is not a test. The ALARM has been triggered! Check the cameras. This
+        is not a test. The ALARM has been triggered! Check the cameras. This is not
+        a test.
+      target: '+15017250095'
+    service: notify.twilio
+alarmsound:
+  sequence:
+  - data:
+      entity_id: media_player.main
+      volume_level: 1
+    service: media_player.volume_set
+  - data: {}
+    service: media_player.turn_on

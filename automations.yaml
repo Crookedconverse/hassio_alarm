@@ -1,0 +1,12 @@
+- id: '1528401400003'
+  alias: New Automation
+  trigger:
+  - entity_id: sensor.node_red
+    from: OK
+    platform: state
+    to: unknown
+  condition: []
+  action:
+  - data:
+      addon: a0d7b954_nodered
+    service: hassio.addon_restart

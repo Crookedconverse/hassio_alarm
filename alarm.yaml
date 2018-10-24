@@ -1,0 +1,95 @@
+##########################################################
+## CUSTOM ALARM COMPONENT ALARM.YAML
+## https://github.com/gazoscalvertos/Hass-Custom-Alarm
+## VERSION:  1.0.2
+## MODIFIED: 18/04/18
+## CHANGE LOG:
+## Add Multi Codes, names, pics
+## optional code to arm alarm
+##########################################################
+
+platform: bwalarm
+name: House
+panel:
+  cameras: []
+  hide_passcode: true
+  hide_sidebar: true
+  enable_sensors_panel: true
+states:
+  armed_away:
+    immediate: []
+    delayed:
+    - binary_sensor.motion_sensor_158d00023938eb
+    - binary_sensor.motion_sensor_158d00023db67a
+    - binary_sensor.door_window_sensor_158d00020b5564
+    - binary_sensor.door_window_sensor_158d000208e169
+    - binary_sensor.door_window_sensor_158d000245b370
+    - binary_sensor.door_window_sensor_158d00023eb1a1
+    - binary_sensor.motion_sensor_158d00023d8ac1
+    - binary_sensor.door_window_sensor_158d0002394353
+    - binary_sensor.motion_sensor_158d000239866f
+    - binary_sensor.door_window_sensor_158d00020b7c28
+    - binary_sensor.switch_158d00020f1c62
+    - binary_sensor.door_window_sensor_158d00020b7bc1
+    - binary_sensor.motion_sensor_158d00023972e0
+    override:
+    - binary_sensor.motion_sensor_158d00023938eb
+    - binary_sensor.motion_sensor_158d00023db67a
+    - binary_sensor.motion_sensor_158d00023d8ac1
+    - binary_sensor.motion_sensor_158d000239866f
+    - binary_sensor.motion_sensor_158d00023972e0
+    - binary_sensor.switch_158d00020f1c62
+    pending_time: '90'
+    warning_time: '90'
+    trigger_time: 600
+  armed_home:
+    immediate: []
+    delayed:
+    - binary_sensor.motion_sensor_158d00023938eb
+    - binary_sensor.motion_sensor_158d00023db67a
+    - binary_sensor.door_window_sensor_158d00020b5564
+    - binary_sensor.door_window_sensor_158d000208e169
+    - binary_sensor.door_window_sensor_158d000245b370
+    - binary_sensor.door_window_sensor_158d00023eb1a1
+    - binary_sensor.motion_sensor_158d00023d8ac1
+    - binary_sensor.door_window_sensor_158d0002394353
+    - binary_sensor.motion_sensor_158d000239866f
+    - binary_sensor.door_window_sensor_158d00020b7c28
+    - binary_sensor.switch_158d00020f1c62
+    - binary_sensor.door_window_sensor_158d00020b7bc1
+    - binary_sensor.motion_sensor_158d00023972e0
+    override:
+    - binary_sensor.motion_sensor_158d00023972e0
+    - binary_sensor.switch_158d00020f1c62
+    - binary_sensor.motion_sensor_158d000239866f
+    - binary_sensor.motion_sensor_158d00023d8ac1
+    - binary_sensor.motion_sensor_158d00023938eb
+    - binary_sensor.motion_sensor_158d00023db67a
+    pending_time: '90'
+    warning_time: '90'
+    trigger_time: 600
+  armed_perimeter:
+    immediate: []
+    delayed: []
+    override: []
+    pending_time: 0
+    warning_time: 0
+    trigger_time: 600
+admin_password: AnchorAdmin501!
+enable_persistence: true
+code: '1299'
+code_to_arm: true
+log: {log_size: '25'}
+users:
+  corp:
+    enabled: true
+    code: '5105'
+    picture: ''
+  bek:
+    enabled: true
+    code: '8317'
+    picture: ''
+  main:
+    enabled: true
+    code: '9101'
+    picture: ''

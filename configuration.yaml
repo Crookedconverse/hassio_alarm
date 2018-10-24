@@ -1,0 +1,166 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Maumelle
+  # Location required to calculate the time the sun rises and sets
+  latitude: 34.7742
+  longitude: -92.1554
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 75
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+  whitelist_external_dirs: /tmp
+  customize: !include customize.yaml
+
+
+  # Enables configuration UI
+config:
+
+#  sensor: !include sensor.yaml
+  sensor:
+  - platform: yr
+  - platform: template
+  - platform: mqtt
+    name: "Node RED"
+    state_topic: "checkIn/nodeRED"
+    expire_after: 300
+  - platform: time_date
+    display_options:
+      - 'time_date'
+
+panel_iframe:
+    configurator:
+        title: Configurator
+        icon: mdi:wrench
+        url: http://192.168.7.247:3218
+    tasmoadmin:
+        title: TasmoAdmin
+        icon: mdi:atom
+        url: http://192.168.7.247:9541
+    nodered:
+        title: NodeRed
+        icon: mdi:biohazard
+        url: http://192.168.7.247:1880
+
+#Xiaomi Aqara Alarm
+
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+   - mac: 7811dcdeb707
+     host: 192.168.7.141
+     key: dfe25110f5274568
+#   - mac: 34ce00923ce1
+#     key: 5ae2d34590c04a3b
+
+# Enables the frontend
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+
+deconz:
+  host: 192.168.7.50
+# Change the port below to the one choosen in the addon
+  port: 8080
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+#mqtt:
+ #broker: 192.168.1.24
+ #port: 1883
+ #client_id: home-assistant-1
+ #keepalive: 60
+ #username: username
+ #password: password
+
+
+mqtt:
+  broker: 192.168.7.247
+  port: 1883
+  username: AnchorHRG
+  password: AnchorAdmin501!
+
+
+media_player:
+  - platform: mpd
+    name: mediaplayer
+    host: 192.168.7.247
+
+
+
+frontend:
+  javascript_version: latest
+
+# Track the sun
+sun:
+
+
+#camera:
+#  - platform: uvc
+#    nvr: 192.168.1.190
+#    key: Eh8vgK2dhCihbdjOU7zytKxPEnLX1KtL
+#    password: QpjVY2VwI9
+
+
+###Twilio
+twilio:
+  account_sid: AC0ba72b863222cf72ef5f2d10261773de
+  auth_token: d8f89a8b64acb09c7363e48dd82ebef0
+
+
+
+#ZWave
+#zwave:
+#  usb_path: /dev/ttyACM0
+  #device_config: zwave_device_config.yaml
+
+# Text to speech
+tts:
+  - platform: google
+    cache: true
+    cache_dir: /config/tts/
+    time_meory: 300
+    language: 'en'
+
+
+
+
+
+input_boolean:
+  node_red:
+    name: Node Red Watchdog
+    initial: on
+
+
+
+notify: !include notify.yaml
+alarm_control_panel: !include alarm.yaml
+panel_custom: !include panel_custom.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

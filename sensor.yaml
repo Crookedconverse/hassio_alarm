@@ -1,0 +1,11 @@
+- platform: yr
+
+- platform: template
+
+- platform: mqtt
+  name: "Node RED"
+  state_topic: "checkIn/nodeRED"
+  expire_after: 300
+- platform: time_date
+  display_options:
+    - 'time_date'
