@@ -16,80 +16,21 @@ panel:
   hide_sidebar: true
   enable_sensors_panel: true
 states:
-  armed_away:
-    immediate: []
-    delayed:
-    - binary_sensor.motion_sensor_158d00023938eb
-    - binary_sensor.motion_sensor_158d00023db67a
-    - binary_sensor.door_window_sensor_158d00020b5564
-    - binary_sensor.door_window_sensor_158d000208e169
-    - binary_sensor.door_window_sensor_158d000245b370
-    - binary_sensor.door_window_sensor_158d00023eb1a1
-    - binary_sensor.motion_sensor_158d00023d8ac1
-    - binary_sensor.door_window_sensor_158d0002394353
-    - binary_sensor.motion_sensor_158d000239866f
-    - binary_sensor.door_window_sensor_158d00020b7c28
-    - binary_sensor.switch_158d00020f1c62
-    - binary_sensor.door_window_sensor_158d00020b7bc1
-    - binary_sensor.motion_sensor_158d00023972e0
-    override:
-    - binary_sensor.motion_sensor_158d00023938eb
-    - binary_sensor.motion_sensor_158d00023db67a
-    - binary_sensor.motion_sensor_158d00023d8ac1
-    - binary_sensor.motion_sensor_158d000239866f
-    - binary_sensor.motion_sensor_158d00023972e0
-    - binary_sensor.switch_158d00020f1c62
-    pending_time: '90'
-    warning_time: '90'
-    trigger_time: 600
-  armed_home:
-    immediate: []
-    delayed:
-    - binary_sensor.motion_sensor_158d00023938eb
-    - binary_sensor.motion_sensor_158d00023db67a
-    - binary_sensor.door_window_sensor_158d00020b5564
-    - binary_sensor.door_window_sensor_158d000208e169
-    - binary_sensor.door_window_sensor_158d000245b370
-    - binary_sensor.door_window_sensor_158d00023eb1a1
-    - binary_sensor.motion_sensor_158d00023d8ac1
-    - binary_sensor.door_window_sensor_158d0002394353
-    - binary_sensor.motion_sensor_158d000239866f
-    - binary_sensor.door_window_sensor_158d00020b7c28
-    - binary_sensor.switch_158d00020f1c62
-    - binary_sensor.door_window_sensor_158d00020b7bc1
-    - binary_sensor.motion_sensor_158d00023972e0
-    override:
-    - binary_sensor.motion_sensor_158d00023972e0
-    - binary_sensor.switch_158d00020f1c62
-    - binary_sensor.motion_sensor_158d000239866f
-    - binary_sensor.motion_sensor_158d00023d8ac1
-    - binary_sensor.motion_sensor_158d00023938eb
-    - binary_sensor.motion_sensor_158d00023db67a
-    pending_time: '90'
-    warning_time: '90'
-    trigger_time: 600
-  armed_perimeter:
-    immediate: []
-    delayed: []
-    override: []
-    pending_time: 0
-    warning_time: 0
-    trigger_time: 600
-admin_password: AnchorAdmin501!
+admin_password: Password1
 enable_persistence: true
-code: '1299'
+code: '0000'
 code_to_arm: true
 log: {log_size: '25'}
 users:
-  corp:
+  user1:
     enabled: true
-    code: '5105'
+    code: '1111'
     picture: ''
-  bek:
+  user2:
     enabled: true
-    code: '8317'
+    code: '2222'
     picture: ''
-  main:
+  user3:
     enabled: true
-    code: '9101'
+    code: '3333'
     picture: ''
