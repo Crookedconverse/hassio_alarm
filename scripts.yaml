@@ -1,14 +1,14 @@
-'1528490910567':
+'!Phone Number':
   alias: slack
   sequence:
   - data:
       data:
         file:
           path: /config/www/snapshot_1.jpg
-      message: Location Lobby
+      message: Location: Enter Location
       title: ALARM TRIGGERED!
     service: notify.slack
-'1528503094994':
+'!Phone Number':
   alias: Twilio
   sequence:
   - data:
@@ -21,7 +21,7 @@
         This is not a test. The ALARM has been triggered! Check the cameras. This
         is not a test. The ALARM has been triggered! Check the cameras. This is not
         a test.
-      target: '+15017250095'
+      target: '+xxxxxxxxxx'
     service: notify.twilio
 alarmsound:
   sequence:
