@@ -1,33 +1,33 @@
 ###PUSHBULLET
   - platform: pushbullet
     name: pushbullet
-    api_key: o.zlwaVHg9uRfjAISrKWsHWEtoxwKRWIFp
+    api_key: api-key
 ###SMTP
   - platform: smtp
     name: ALARM_TEXT_MESSAGE
     server: smtp.gmail.com
     port: 587
-    sender: it@davidsburgers.com
+    sender: user email address
     starttls: 5
-    username: it@davidsburgers.com
-    password: 127.0.0.1
+    username: email username
+    password: email password
     recipient:
-   #Paul
-      - 5015145992@tmomail.net
-   #Matt
-    #  - 5017608775@txt.att.net
-   #Christian
-    #  - 5019083522@sms.myboostmobile.com
-   #Pamma
-    #  - @vtext.com
+   #User1
+      - xxxxxxxxxx@tmomail.net
+   #user2
+    #  - xxxxxxxxx@txt.att.net
+   #User3
+    #  - xxxxxxxxx@sms.myboostmobile.com
+   #User4
+    #  - xxxxxxxxx@vtext.com
 
 
 ###SLACK
   - platform: slack
     name: slack
-    api_key: xoxb-33426299250-378343239908-0I4GT0eJvCKa8yXPMwH2cE4Z
-    default_channel: '#maumelletechsupport'
+    api_key: !Bot API_Key
+    default_channel: '#defaultchannel'
 ###Twilio Calling
   - name: twilio
     platform: twilio_call
-    from_number: +15016979146
+    from_number: +twillio_number
