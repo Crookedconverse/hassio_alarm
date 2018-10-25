@@ -1,0 +1,4135 @@
+[
+    {
+        "id": "d8654406.b1e848",
+        "type": "tab",
+        "label": "Alarm Panel",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8351d88f.780408",
+        "type": "tab",
+        "label": "Node RED Watchdog",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "eef7296c.bbfc48",
+        "type": "tab",
+        "label": "Sonoff",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "566ed95f.2c9b98",
+        "type": "tab",
+        "label": "Battery Level to Slack",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "baf6cc60.b57ab",
+        "type": "tab",
+        "label": "Unifi Camera Notify",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "6da1f675.6f7518",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "url": "http://192.168.1.100:8123",
+        "pass": ""
+    },
+    {
+        "id": "d6f34b11.94aeb8",
+        "type": "ui_base",
+        "z": "",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "46b7f963.36f238",
+        "type": "dropbox-config",
+        "z": "",
+        "name": "snapshot_images"
+    },
+    {
+        "id": "186b1cea.822ed3",
+        "type": "dropbox-config",
+        "z": "",
+        "name": "Access Token"
+    },
+    {
+        "id": "476fb34f.f7434c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Tab 1",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "5cfd764c.a85ce8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 6",
+        "tab": "476fb34f.f7434c",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "1edeb7ac.778d58",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "192.168.42.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "9f8b7a99.37c1c8",
+        "type": "ui_group",
+        "z": "",
+        "name": "UI Elements",
+        "tab": "bac83d87.a5ae",
+        "order": 1,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "bac83d87.a5ae",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "c20ef9a2.33c0c8",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "192.168.42.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "9bd89e87.c8655",
+        "type": "ui_group",
+        "z": "",
+        "name": "UI Elements",
+        "tab": "6e323778.b4e748",
+        "order": 1,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "6e323778.b4e748",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "117559f4.502d26",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "192.168.42.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "c74d89c0.1a1cb8",
+        "type": "ui_group",
+        "z": "",
+        "name": "UI Elements",
+        "tab": "47d1d4ec.da9c4c",
+        "order": 1,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "47d1d4ec.da9c4c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
+        "id": "ac2bb8c7.d54cd8",
+        "type": "light-scheduler-settings",
+        "z": "",
+        "name": "my settings",
+        "latitude": "35.064454",
+        "longitude": "-92.415445"
+    },
+    {
+        "id": "6bdb4550.406eac",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "mqtt",
+        "broker": "192.168.1.150",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "b1f23d25.fd251",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "192.168.1.100",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "13e972e3.e2f20d",
+        "type": "server-state-changed",
+        "z": "d8654406.b1e848",
+        "name": "Alarm_Panel.house",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "alarm_control_panel.house",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "a7bed341.dc279",
+                "fd641c68.5fec4"
+            ]
+        ]
+    },
+    {
+        "id": "f52c3d90.fdaa8",
+        "type": "trigger-state",
+        "z": "d8654406.b1e848",
+        "name": "Old.State Warn",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "etwlhfc7jbo",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [
+                "fb381f64.25492",
+                "e2914a79.b12958"
+            ]
+        ]
+    },
+    {
+        "id": "fb381f64.25492",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Alert",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{   \"message\": \"Enter Name - Alarm System! {{ states[states.alarm_control_panel.house.attributes.changed_by.split(\\\".\\\")[0]][ states.alarm_control_panel.house.attributes.changed_by.split(\\\".\\\")[1]].name }}\" }",
+        "mergecontext": "",
+        "x": 670,
+        "y": 160,
+        "wires": [
+            [
+                "bebd8156.41ae5"
+            ]
+        ]
+    },
+    {
+        "id": "cff141c8.dc69d",
+        "type": "debug",
+        "z": "d8654406.b1e848",
+        "name": "Triggered",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 980,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a7bed341.dc279",
+        "type": "switch",
+        "z": "d8654406.b1e848",
+        "name": "Armed_Home/Away",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "alarm_armed_away, alarm_armed_home",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "f52c3d90.fdaa8"
+            ]
+        ]
+    },
+    {
+        "id": "72ed8da.ef1e874",
+        "type": "comment",
+        "z": "d8654406.b1e848",
+        "name": "Notification",
+        "info": "",
+        "x": 100,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "b132e08e.e01f6",
+        "type": "light-scheduler",
+        "z": "8351d88f.780408",
+        "settings": "ac2bb8c7.d54cd8",
+        "events": "[]",
+        "topic": "",
+        "name": "NodeRED Checkin",
+        "onPayload": "OK",
+        "onPayloadType": "str",
+        "offPayload": "OK",
+        "offPayloadType": "str",
+        "onlyWhenDark": false,
+        "sunElevationThreshold": 6,
+        "sunShowElevationInStatus": false,
+        "outputfreq": "output.minutely",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "fe1ae503.1f1198"
+            ]
+        ]
+    },
+    {
+        "id": "fe1ae503.1f1198",
+        "type": "api-call-service",
+        "z": "8351d88f.780408",
+        "name": "Toggle Watchdog",
+        "server": "6da1f675.6f7518",
+        "service_domain": "input_boolean",
+        "service": "toggle",
+        "data": "{ \"entity_id\": \"input_boolean.node_red\" }",
+        "mergecontext": "",
+        "x": 410,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bc3c531.1e8d7c",
+        "type": "change",
+        "z": "8351d88f.780408",
+        "name": "OK",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "OK",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "6841aff2.63d15"
+            ]
+        ]
+    },
+    {
+        "id": "b8e0ff36.15c71",
+        "type": "server-state-changed",
+        "z": "8351d88f.780408",
+        "name": "Watchdog Checkin",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "input_boolean.node_red",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "6bc3c531.1e8d7c"
+            ]
+        ]
+    },
+    {
+        "id": "6841aff2.63d15",
+        "type": "mqtt out",
+        "z": "8351d88f.780408",
+        "name": "Checkin MQTT",
+        "topic": "checkIn/nodeRED",
+        "qos": "0",
+        "retain": "false",
+        "broker": "6bdb4550.406eac",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3cd76a08.d31716",
+        "type": "debug",
+        "z": "8351d88f.780408",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 390,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "25ff9c20.a86a44",
+        "type": "mqtt out",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "topic": "sonoff1/",
+        "qos": "",
+        "retain": "",
+        "broker": "b1f23d25.fd251",
+        "x": 380,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3489adf3.a5f0c2",
+        "type": "inject",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "25ff9c20.a86a44"
+            ]
+        ]
+    },
+    {
+        "id": "11254ee0.330c61",
+        "type": "mqtt in",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "topic": "sonoff1/#",
+        "qos": "2",
+        "broker": "b1f23d25.fd251",
+        "x": 180,
+        "y": 260,
+        "wires": [
+            [
+                "18e3bb4c.cc31d5"
+            ]
+        ]
+    },
+    {
+        "id": "18e3bb4c.cc31d5",
+        "type": "debug",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "70efec98.9cd9e4",
+        "type": "mqtt out",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "topic": "sonoff1/",
+        "qos": "",
+        "retain": "",
+        "broker": "b1f23d25.fd251",
+        "x": 380,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "80130cef.08416",
+        "type": "inject",
+        "z": "eef7296c.bbfc48",
+        "name": "",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "70efec98.9cd9e4"
+            ]
+        ]
+    },
+    {
+        "id": "e2914a79.b12958",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "ALARM SOUND",
+        "server": "6da1f675.6f7518",
+        "service_domain": "media_player",
+        "service": "turn_on",
+        "data": "{}",
+        "mergecontext": "",
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "2ad6fbab.f40ce4"
+            ]
+        ]
+    },
+    {
+        "id": "f4c81cc8.ec4a2",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "ALARM SOUND",
+        "server": "6da1f675.6f7518",
+        "service_domain": "media_player",
+        "service": "turn_on",
+        "data": "{}",
+        "mergecontext": "",
+        "x": 1000,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ad6fbab.f40ce4",
+        "type": "delay",
+        "z": "d8654406.b1e848",
+        "name": "Delay",
+        "pauseType": "delay",
+        "timeout": "16",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "8",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "f4c81cc8.ec4a2"
+            ]
+        ]
+    },
+    {
+        "id": "bebd8156.41ae5",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Slack.Alert",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"message\":\"Enter Name - Alarm System!\",   \"title\":\"Alarm has been triggered. Please check the cameras: Triggered!\",   \"data\":{     \"file\":{       \"path\":\"/config/www/images/ha.png\"     }   } }",
+        "mergecontext": "",
+        "x": 810,
+        "y": 160,
+        "wires": [
+            [
+                "cff141c8.dc69d"
+            ]
+        ]
+    },
+    {
+        "id": "fabe226c.4fa08",
+        "type": "inject",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 600,
+        "y": 100,
+        "wires": [
+            [
+                "bebd8156.41ae5"
+            ]
+        ]
+    },
+    {
+        "id": "4072ad0c.3cd244",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.motion_sensor_158d0001e52279\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "ddd83985.6f0c98",
+                "96c4d402.e2e9b8"
+            ]
+        ]
+    },
+    {
+        "id": "60d79f0a.7d0d1",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Motion 2279",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.motion_sensor_158d0001e52279",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "268b49f6.e90c06",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "4072ad0c.3cd244"
+            ]
+        ]
+    },
+    {
+        "id": "472b1305.b4058c",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log.txt\"     }   } }",
+        "mergecontext": "",
+        "x": 830,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddd83985.6f0c98",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 720,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96c4d402.e2e9b8",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "472b1305.b4058c"
+            ]
+        ]
+    },
+    {
+        "id": "abacd9df.bcb328",
+        "type": "comment",
+        "z": "566ed95f.2c9b98",
+        "name": "Battery Level",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "da49df91.06351",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.motion_sensor_158d0001e53237\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 470,
+        "y": 220,
+        "wires": [
+            [
+                "4d98c6a3.46aba8",
+                "8eb85b56.50e598"
+            ]
+        ]
+    },
+    {
+        "id": "4ff96cbb.95bc54",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Motion 3237",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.motion_sensor_158d0001e53237",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0766746.f5cc68",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 300,
+        "y": 220,
+        "wires": [
+            [
+                "da49df91.06351"
+            ]
+        ]
+    },
+    {
+        "id": "8c3048af.70f658",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log2.txt\"     }   } }",
+        "mergecontext": "",
+        "x": 830,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d98c6a3.46aba8",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log2.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 720,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8eb85b56.50e598",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 660,
+        "y": 240,
+        "wires": [
+            [
+                "8c3048af.70f658"
+            ]
+        ]
+    },
+    {
+        "id": "9826462.d4c00b8",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.motion_sensor_158d0001e5239c\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 470,
+        "y": 320,
+        "wires": [
+            [
+                "a51ac34b.60c74",
+                "159baf14.4a5fe1"
+            ]
+        ]
+    },
+    {
+        "id": "393afd.f3740504",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Motion 239c",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.motion_sensor_158d0001e5239c",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcbab7ee.dfc1c8",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "9826462.d4c00b8"
+            ]
+        ]
+    },
+    {
+        "id": "1a4685b5.88960a",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log3.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 830,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a51ac34b.60c74",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log3.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 720,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "159baf14.4a5fe1",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 660,
+        "y": 340,
+        "wires": [
+            [
+                "1a4685b5.88960a"
+            ]
+        ]
+    },
+    {
+        "id": "668a7ff1.ef452",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.motion_sensor_158d0001e523bd\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "8295cf31.64fd6",
+                "241af96b.4b6eb6"
+            ]
+        ]
+    },
+    {
+        "id": "1dd9a79a.fd9818",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Motion 23bd",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.motion_sensor_158d0001e523bd",
+        "x": 150,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd0487ef.5e73b8",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "668a7ff1.ef452"
+            ]
+        ]
+    },
+    {
+        "id": "a86b63f1.11502",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log4.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 830,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8295cf31.64fd6",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log4.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 720,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "241af96b.4b6eb6",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "a86b63f1.11502"
+            ]
+        ]
+    },
+    {
+        "id": "e5ce4b88.969978",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d000204bb1a\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 520,
+        "wires": [
+            [
+                "d207079a.acd118",
+                "36d5fdaf.b41a82"
+            ]
+        ]
+    },
+    {
+        "id": "45658b18.ca3514",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window bb1a",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d000204bb1a",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f9bb324.73482c",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 520,
+        "wires": [
+            [
+                "e5ce4b88.969978"
+            ]
+        ]
+    },
+    {
+        "id": "f7524bd8.691ed8",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log5.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d207079a.acd118",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log5.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "36d5fdaf.b41a82",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 540,
+        "wires": [
+            [
+                "f7524bd8.691ed8"
+            ]
+        ]
+    },
+    {
+        "id": "bf8f3f46.8527b",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d0002049916\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "f9261ab8.e46278",
+                "2b29b169.dce73e"
+            ]
+        ]
+    },
+    {
+        "id": "938ae5e5.d0ac48",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window 9916",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d0002049916",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ec9f6db6.b29ae",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 620,
+        "wires": [
+            [
+                "bf8f3f46.8527b"
+            ]
+        ]
+    },
+    {
+        "id": "3cf9ffbd.f27ba",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log6.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f9261ab8.e46278",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log6.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b29b169.dce73e",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "3cf9ffbd.f27ba"
+            ]
+        ]
+    },
+    {
+        "id": "a6490736.8a5a68",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d000204ba46\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 720,
+        "wires": [
+            [
+                "802ce8c7.5e4f28",
+                "1f37f667.b96c1a"
+            ]
+        ]
+    },
+    {
+        "id": "8f221664.439138",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window ba46",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d000204ba46",
+        "x": 170,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "531869b4.cef0d8",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 720,
+        "wires": [
+            [
+                "a6490736.8a5a68"
+            ]
+        ]
+    },
+    {
+        "id": "305f9ae5.d5f306",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log7.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "802ce8c7.5e4f28",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log7.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f37f667.b96c1a",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 740,
+        "wires": [
+            [
+                "305f9ae5.d5f306"
+            ]
+        ]
+    },
+    {
+        "id": "f96286be.b832c8",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d000204be90\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 820,
+        "wires": [
+            [
+                "ca7cf150.ea6f7",
+                "7a061f8b.293a"
+            ]
+        ]
+    },
+    {
+        "id": "4be77f1a.3d96",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window be90",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d000204be90",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c4a5fa1.2d8e1",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 820,
+        "wires": [
+            [
+                "f96286be.b832c8"
+            ]
+        ]
+    },
+    {
+        "id": "61f0ac54.b12f04",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log8.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ca7cf150.ea6f7",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log8.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a061f8b.293a",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 840,
+        "wires": [
+            [
+                "61f0ac54.b12f04"
+            ]
+        ]
+    },
+    {
+        "id": "f7e27373.e1461",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d0002059916\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 920,
+        "wires": [
+            [
+                "8a8a2af3.566c48",
+                "ad96a679.0325d8"
+            ]
+        ]
+    },
+    {
+        "id": "3bca4e90.4e48c2",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window 9916",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d0002059916",
+        "x": 170,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7a24af4.1da198",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 920,
+        "wires": [
+            [
+                "f7e27373.e1461"
+            ]
+        ]
+    },
+    {
+        "id": "6a74484a.59a048",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log9.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a8a2af3.566c48",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log9.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad96a679.0325d8",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 940,
+        "wires": [
+            [
+                "6a74484a.59a048"
+            ]
+        ]
+    },
+    {
+        "id": "56f8f3f4.f450ac",
+        "type": "template",
+        "z": "566ed95f.2c9b98",
+        "name": "Log Battery",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Sensor Name: binary_sensor.door_window_sensor_158d000205b128\nBattery Level: {{payload.data.attributes.battery_level}}",
+        "x": 510,
+        "y": 1020,
+        "wires": [
+            [
+                "594a5737.719c68",
+                "c3a04412.7acec8"
+            ]
+        ]
+    },
+    {
+        "id": "99191617.b569c8",
+        "type": "poll-state",
+        "z": "566ed95f.2c9b98",
+        "name": "Door/Window b128",
+        "server": "6da1f675.6f7518",
+        "updateinterval": "60",
+        "outputinitially": false,
+        "outputonchanged": false,
+        "entity_id": "binary_sensor.door_window_sensor_158d000205b128",
+        "x": 170,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b274e120.3231b",
+        "type": "throttle",
+        "z": "566ed95f.2c9b98",
+        "name": "Weekly",
+        "throttleType": "time",
+        "timeLimit": "168",
+        "timeLimitType": "hours",
+        "countLimit": 0,
+        "blockSize": 0,
+        "locked": false,
+        "x": 340,
+        "y": 1020,
+        "wires": [
+            [
+                "56f8f3f4.f450ac"
+            ]
+        ]
+    },
+    {
+        "id": "9fd52936.d8ba68",
+        "type": "api-call-service",
+        "z": "566ed95f.2c9b98",
+        "name": "Slack.Battery",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/battery_log10.txt\"     }   }}",
+        "mergecontext": "",
+        "x": 870,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "594a5737.719c68",
+        "type": "file",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "filename": "/config/www/battery_log10.txt",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 760,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c3a04412.7acec8",
+        "type": "delay",
+        "z": "566ed95f.2c9b98",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 700,
+        "y": 1040,
+        "wires": [
+            [
+                "9fd52936.d8ba68"
+            ]
+        ]
+    },
+    {
+        "id": "375a9ab8.bddd96",
+        "type": "comment",
+        "z": "baf6cc60.b57ab",
+        "name": "Camera Snapshot on Trigger",
+        "info": "",
+        "x": 140,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "89a79760.eecb58",
+        "type": "server-state-changed",
+        "z": "baf6cc60.b57ab",
+        "name": "Alarm_Panel.house",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "alarm_control_panel.house",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "2dc9b03c.b1016",
+                "9388d55f.564988",
+                "9f9b0bb7.9d7cd8",
+                "7c5dc03.a3cff4",
+                "c85df914.df7568",
+                "15a44422.db8dbc",
+                "1508830.c7bd37d",
+                "893c8cc3.3d615",
+                "2afff4bb.2b0cec",
+                "1b3352ae.b9522d",
+                "da188259.c794c",
+                "1bd2cab3.4a50d5",
+                "185d12a9.7fedfd"
+            ]
+        ]
+    },
+    {
+        "id": "2dc9b03c.b1016",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Lobby",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "tcybe373dr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 330,
+        "y": 60,
+        "wires": [
+            [],
+            [],
+            [
+                "ed9712df.ad584"
+            ]
+        ]
+    },
+    {
+        "id": "9388d55f.564988",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Kitchen_Registers",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "xwar3tbtgvh",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            [
+                "b5b1a8bb.b2c978"
+            ]
+        ]
+    },
+    {
+        "id": "9f9b0bb7.9d7cd8",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Office",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "krlnvlimpbe",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 330,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            [
+                "db265823.eee948"
+            ]
+        ]
+    },
+    {
+        "id": "7c5dc03.a3cff4",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Dish Washing",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "m2ocxrvdyl9",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [
+                "e6a0397d.bd1bf8"
+            ]
+        ]
+    },
+    {
+        "id": "c85df914.df7568",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Back Storage",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "gt7b3kh74r6",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [],
+            [],
+            [
+                "47408c6d.68e0d4"
+            ]
+        ]
+    },
+    {
+        "id": "15a44422.db8dbc",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Fridge Exterior ",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "12mlwcgg10e",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [],
+            [],
+            [
+                "7f07efba.5b2ee"
+            ]
+        ]
+    },
+    {
+        "id": "1508830.c7bd37d",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Bathroom Side Lobby",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "lixzanqocl",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            [
+                "4d3c65.41f4239c"
+            ]
+        ]
+    },
+    {
+        "id": "893c8cc3.3d615",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Registers",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "f2kxyp91t69",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [],
+            [],
+            [
+                "cd0a316b.c879b"
+            ]
+        ]
+    },
+    {
+        "id": "2afff4bb.2b0cec",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Drive Thru Split",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "jcp0r1x8po",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [],
+            [],
+            [
+                "49374709.7710d8"
+            ]
+        ]
+    },
+    {
+        "id": "1b3352ae.b9522d",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Center View",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "bgluyg598dn",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            [
+                "44352b90.006254"
+            ]
+        ]
+    },
+    {
+        "id": "da188259.c794c",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Coke Machine",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "y2jiu5e2iej",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [],
+            [],
+            [
+                "13e415a1.68228a"
+            ]
+        ]
+    },
+    {
+        "id": "1bd2cab3.4a50d5",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "Kitchen",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "4m3qbunbhxj",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 340,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            [
+                "7a220817.6ccfa8"
+            ]
+        ]
+    },
+    {
+        "id": "185d12a9.7fedfd",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "DT Window 1",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "ivfsdto3kf",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [],
+            [],
+            [
+                "442d2844.2b9298"
+            ]
+        ]
+    },
+    {
+        "id": "908d3315.a88a6",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Lobby\",   \"entity_id\": \"camera.lobby\",   \"filename\": \"/config/www/snapshot_1.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 60,
+        "wires": [
+            [
+                "877f35eb.dbe4d8"
+            ]
+        ]
+    },
+    {
+        "id": "c0704f71.58526",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_1.jpg",
+        "localFilename": "/config/www/snapshot_1.jpg",
+        "name": "Snapshot.Lobby",
+        "x": 1260,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "71ed5676.3a3298",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "/snapshot_1.jpg",
+        "name": "Lobby",
+        "x": 630,
+        "y": 660,
+        "wires": [
+            [
+                "53dbe08e.bd7bf"
+            ]
+        ]
+    },
+    {
+        "id": "a7b9a059.54165",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/maumelle_cameras/snapshot_1.jpg",
+        "name": "",
+        "x": 180,
+        "y": 660,
+        "wires": [
+            [
+                "d3276911.92bc28"
+            ]
+        ]
+    },
+    {
+        "id": "5bf71da.aff9ee4",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Kitchen_Register\",   \"entity_id\": \"camera.kitchen_registers\",   \"filename\": \"/config/www/snapshot_2.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 100,
+        "wires": [
+            [
+                "4eae48d6.39b7a8"
+            ]
+        ]
+    },
+    {
+        "id": "591143fd.f6543c",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_2.jpg",
+        "localFilename": "/config/www/snapshot_2.jpg",
+        "name": "Snapshot.Kitchen_Registers",
+        "x": 1300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "34b30fc4.89cbf",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Office\",   \"entity_id\": \"camera.office\",   \"filename\": \"/config/www/snapshot_3.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 140,
+        "wires": [
+            [
+                "d65c7c16.741f4"
+            ]
+        ]
+    },
+    {
+        "id": "933c6971.72a7b8",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_3.jpg",
+        "localFilename": "/config/www/snapshot_3.jpg",
+        "name": "Snapshot.Office",
+        "x": 1260,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ead1dadb.b4cf18",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Bathroom_Side_Lobby\",   \"entity_id\": \"camera.bathroom_side_lobby\",   \"filename\": \"/config/www/snapshot_7.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "6b8141d1.155cb"
+            ]
+        ]
+    },
+    {
+        "id": "6fbd2f4c.f3d0b",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_7.jpg",
+        "localFilename": "/config/www/snapshot_7.jpg",
+        "name": "Snapshot.BathroomSideLobby",
+        "x": 1310,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8447fe01.7d6d6",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Center_View\",   \"entity_id\": \"camera.center_view\",   \"filename\": \"/config/www/snapshot_10.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 420,
+        "wires": [
+            [
+                "6d205bcf.1dd024"
+            ]
+        ]
+    },
+    {
+        "id": "573fe16f.45498",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_10.jpg",
+        "localFilename": "/config/www/snapshot_10.jpg",
+        "name": "Snapshot.CenterView",
+        "x": 1280,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "98e126c.32573d8",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "Text Message",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "alarm_text_message",
+        "data": "{  \"message\": \"Coke_Machine\",   \"entity_id\": \"camera.coke_machines\",   \"filename\": \"/config/www/snapshot_11.jpg\"  }",
+        "mergecontext": "",
+        "x": 960,
+        "y": 460,
+        "wires": [
+            [
+                "c952ba6a.831de8"
+            ]
+        ]
+    },
+    {
+        "id": "1dca85ba.1149fa",
+        "type": "dropbox out",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_11.jpg",
+        "localFilename": "/config/www/snapshot_11.jpg",
+        "name": "Snapshot.CokeMachines",
+        "x": 1290,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "9a38b8f0.dd9568",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_2.jpg",
+        "name": "Kitchen_Registers",
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "e75cdbc.6ded128"
+            ]
+        ]
+    },
+    {
+        "id": "1b1d487.bc16eb8",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_3.jpg",
+        "name": "Office",
+        "x": 630,
+        "y": 740,
+        "wires": [
+            [
+                "11d044c8.aedd7b"
+            ]
+        ]
+    },
+    {
+        "id": "67682bf8.a81744",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_7.jpg",
+        "name": "BathroomSideLobby",
+        "x": 680,
+        "y": 900,
+        "wires": [
+            [
+                "5c5a1abc.103d84"
+            ]
+        ]
+    },
+    {
+        "id": "ce1a8143.24c86",
+        "type": "e-mail",
+        "z": "baf6cc60.b57ab",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "secure": true,
+        "name": "5017608775@mms.att.net, 8709187789@mms.att.net, 4797471988@vtext.com, 5019083522@sms.myboostmobile.com,5013195461@txt.att.net",
+        "dname": "MMS",
+        "x": 1090,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d3fbf4d8.939418",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_10.jpg",
+        "name": "CenterView",
+        "x": 650,
+        "y": 1020,
+        "wires": [
+            [
+                "3ccab01f.70ca1"
+            ]
+        ]
+    },
+    {
+        "id": "c8618281.0541a",
+        "type": "dropbox",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filename": "snapshot_11.jpg",
+        "name": "CokeMachine",
+        "x": 660,
+        "y": 1060,
+        "wires": [
+            [
+                "a000a580.3ba7e8"
+            ]
+        ]
+    },
+    {
+        "id": "877f35eb.dbe4d8",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "8",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 60,
+        "wires": [
+            [
+                "c0704f71.58526"
+            ]
+        ]
+    },
+    {
+        "id": "4eae48d6.39b7a8",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "random",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "8",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 100,
+        "wires": [
+            [
+                "591143fd.f6543c"
+            ]
+        ]
+    },
+    {
+        "id": "d65c7c16.741f4",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "random",
+        "timeout": "2.5",
+        "timeoutUnits": "seconds",
+        "rate": "2",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "8",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 140,
+        "wires": [
+            [
+                "933c6971.72a7b8"
+            ]
+        ]
+    },
+    {
+        "id": "6b8141d1.155cb",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "timed",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 300,
+        "wires": [
+            [
+                "6fbd2f4c.f3d0b"
+            ]
+        ]
+    },
+    {
+        "id": "6d205bcf.1dd024",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "timed",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 421,
+        "wires": [
+            [
+                "573fe16f.45498"
+            ]
+        ]
+    },
+    {
+        "id": "c952ba6a.831de8",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "Delay",
+        "pauseType": "timed",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1110,
+        "y": 460,
+        "wires": [
+            [
+                "1dca85ba.1149fa"
+            ]
+        ]
+    },
+    {
+        "id": "90e891b8.682bd",
+        "type": "comment",
+        "z": "baf6cc60.b57ab",
+        "name": "Snapshot to Drop Box to MMS",
+        "info": "",
+        "x": 160,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "6703dd3a.210434",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_1",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/snapshot_1.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 660,
+        "wires": [
+            [
+                "71ed5676.3a3298"
+            ]
+        ]
+    },
+    {
+        "id": "9467190.45d20e8",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_2",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "/snapshot_2.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 700,
+        "wires": [
+            [
+                "9a38b8f0.dd9568"
+            ]
+        ]
+    },
+    {
+        "id": "a1562fef.97c74",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_3",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/snapshot_3.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 740,
+        "wires": [
+            [
+                "1b1d487.bc16eb8"
+            ]
+        ]
+    },
+    {
+        "id": "d991b576.6384b8",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_7",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/snapshot_7.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 900,
+        "wires": [
+            [
+                "67682bf8.a81744"
+            ]
+        ]
+    },
+    {
+        "id": "2e18e1eb.18d13e",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_10",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/snapshot_10.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 1020,
+        "wires": [
+            [
+                "d3fbf4d8.939418"
+            ]
+        ]
+    },
+    {
+        "id": "8d404c46.0b54b",
+        "type": "switch",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot_11",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/snapshot_11.jpg",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 470,
+        "y": 1060,
+        "wires": [
+            [
+                "c8618281.0541a"
+            ]
+        ]
+    },
+    {
+        "id": "fb57a932.5d3a08",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{  \"entity_id\": \"camera.lobby\",   \"filename\": \"/config/www/snapshot_1.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b5c2ca1.35f883",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/snapshot_2.jpg",
+        "name": "",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "74b6dc8e.c59e14"
+            ]
+        ]
+    },
+    {
+        "id": "972ce917.635a98",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/snapshot_3.jpg",
+        "name": "",
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "dbfa7fc0.8513"
+            ]
+        ]
+    },
+    {
+        "id": "33396676.8ce44a",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/snapshot_10.jpg",
+        "name": "",
+        "x": 120,
+        "y": 1020,
+        "wires": [
+            [
+                "159c3a21.d60316"
+            ]
+        ]
+    },
+    {
+        "id": "b16fe78e.bf4648",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/snapshot_11.jpg",
+        "name": "",
+        "x": 120,
+        "y": 1060,
+        "wires": [
+            [
+                "25002f96.49629"
+            ]
+        ]
+    },
+    {
+        "id": "e39fc03e.15681",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{   \"entity_id\": \"camera.kitchen__registers\",   \"filename\": \"/config/www/snapshot_2.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a2a33728.d87598",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{  \"entity_id\": \"camera.office\",   \"filename\": \"/config/www/snapshot_3.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "178b5fd7.02bc1",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{  \"entity_id\": \"camera.bathroom_side_lobby\",   \"filename\": \"/config/www/snapshot_7.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d8396b2.e6b898",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{  \"entity_id\": \"camera.center_view\",   \"filename\": \"/config/www/snapshot_10.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "97cb24c7.7baad8",
+        "type": "api-call-service",
+        "z": "baf6cc60.b57ab",
+        "name": "snapshot",
+        "server": "6da1f675.6f7518",
+        "service_domain": "camera",
+        "service": "snapshot",
+        "data": "{  \"entity_id\": \"camera.coke_machines\",   \"filename\": \"/config/www/snapshot_11.jpg\"  }",
+        "mergecontext": "",
+        "x": 800,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3276911.92bc28",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "6703dd3a.210434"
+            ]
+        ]
+    },
+    {
+        "id": "795df275.b8d52c",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 900,
+        "wires": [
+            [
+                "d991b576.6384b8"
+            ]
+        ]
+    },
+    {
+        "id": "74b6dc8e.c59e14",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "delay 5s",
+        "pauseType": "delayv",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "10",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 700,
+        "wires": [
+            [
+                "9467190.45d20e8"
+            ]
+        ]
+    },
+    {
+        "id": "dbfa7fc0.8513",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "a1562fef.97c74"
+            ]
+        ]
+    },
+    {
+        "id": "159c3a21.d60316",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 1020,
+        "wires": [
+            [
+                "2e18e1eb.18d13e"
+            ]
+        ]
+    },
+    {
+        "id": "25002f96.49629",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 300,
+        "y": 1060,
+        "wires": [
+            [
+                "8d404c46.0b54b"
+            ]
+        ]
+    },
+    {
+        "id": "53dbe08e.bd7bf",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e75cdbc.6ded128",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11d044c8.aedd7b",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c5a1abc.103d84",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3ccab01f.70ca1",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a000a580.3ba7e8",
+        "type": "delay",
+        "z": "baf6cc60.b57ab",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 860,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bd2921c.b8604e",
+        "type": "dropbox in",
+        "z": "baf6cc60.b57ab",
+        "dropbox": "186b1cea.822ed3",
+        "filepattern": "/snapshot_7.jpg",
+        "name": "",
+        "x": 120,
+        "y": 900,
+        "wires": [
+            [
+                "795df275.b8d52c"
+            ]
+        ]
+    },
+    {
+        "id": "ed9712df.ad584",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 60,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b5b1a8bb.b2c978",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "db265823.eee948",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e6a0397d.bd1bf8",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "47408c6d.68e0d4",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7f07efba.5b2ee",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4d3c65.41f4239c",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cd0a316b.c879b",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "49374709.7710d8",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 380,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "44352b90.006254",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "13e415a1.68228a",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7a220817.6ccfa8",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "442d2844.2b9298",
+        "type": "trigger-state",
+        "z": "baf6cc60.b57ab",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e405355.4f2e2c8",
+        "type": "mqtt in",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "topic": "/Sonoff1/#",
+        "qos": "2",
+        "broker": "b1f23d25.fd251",
+        "x": 80,
+        "y": 640,
+        "wires": [
+            [
+                "f0b248ad.aa34e8"
+            ]
+        ]
+    },
+    {
+        "id": "f0b248ad.aa34e8",
+        "type": "debug",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 300,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b3373196.0104a",
+        "type": "server-state-changed",
+        "z": "d8654406.b1e848",
+        "name": "Alarm_Panel.house",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "alarm_control_panel.house",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed2da62c.d81c98",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Slack.Lobby",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/images/ha.png\"     }   },   \"message\": \"Enter Name - Alarm System!\",   \"title\": \"Alarm has been triggered, Please check the cameras!\" }",
+        "mergecontext": "",
+        "x": 830,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b657e44.341d4",
+        "type": "trigger-state",
+        "z": "d8654406.b1e848",
+        "name": "Old.State Warn",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "etwlhfc7jbo",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 300,
+        "y": 360,
+        "wires": [
+            [],
+            [],
+            [
+                "70c06916.85b428"
+            ]
+        ]
+    },
+    {
+        "id": "9db725d4.dfc558",
+        "type": "delay",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "ed2da62c.d81c98"
+            ]
+        ]
+    },
+    {
+        "id": "d04966a8.e22a78",
+        "type": "comment",
+        "z": "d8654406.b1e848",
+        "name": "Slack Notifications",
+        "info": "",
+        "x": 110,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "eb0c1492.24d4d8",
+        "type": "server-state-changed",
+        "z": "d8654406.b1e848",
+        "name": "Alarm_Panel.house",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "alarm_control_panel.house",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 110,
+        "y": 500,
+        "wires": [
+            [
+                "b09f30ae.fb5d8"
+            ]
+        ]
+    },
+    {
+        "id": "b09f30ae.fb5d8",
+        "type": "trigger-state",
+        "z": "d8654406.b1e848",
+        "name": "Old.State Warn",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "etwlhfc7jbo",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "previous_state",
+                "comparatorPropertyValue": "old_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "warning"
+            }
+        ],
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            [
+                "3d5fce87.e65462"
+            ]
+        ]
+    },
+    {
+        "id": "c97ce7f4.bd4708",
+        "type": "delay",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 680,
+        "y": 500,
+        "wires": [
+            [
+                "c891b39d.1aa4a"
+            ]
+        ]
+    },
+    {
+        "id": "c891b39d.1aa4a",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Twilio Calling",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "twilio",
+        "data": "{   \"message\": \"ALARM has been triggered! Check the cameras. This is not a test. ALARM has been triggered! Check the cameras. This is not a test. ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test. The ALARM has been triggered! Check the cameras. This is not a test.\",   \"target\": \"+15017250095\" }",
+        "mergecontext": "",
+        "x": 830,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d5fce87.e65462",
+        "type": "trigger-state",
+        "z": "d8654406.b1e848",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 500,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            [
+                "c97ce7f4.bd4708"
+            ]
+        ]
+    },
+    {
+        "id": "70c06916.85b428",
+        "type": "trigger-state",
+        "z": "d8654406.b1e848",
+        "name": "New.State Triggered",
+        "server": "6da1f675.6f7518",
+        "entityid": "alarm_control_panel.house",
+        "debugenabled": false,
+        "constraints": [],
+        "constraintsmustmatch": "all",
+        "outputs": 3,
+        "customoutputs": [
+            {
+                "outputId": "g17fo8zyoqr",
+                "messageType": "default",
+                "messageValue": "",
+                "comparatorPropertyType": "current_state",
+                "comparatorPropertyValue": "new_state.state",
+                "comparatorType": "is",
+                "comparatorValue": "triggered"
+            }
+        ],
+        "x": 500,
+        "y": 360,
+        "wires": [
+            [],
+            [],
+            [
+                "9db725d4.dfc558"
+            ]
+        ]
+    },
+    {
+        "id": "92c4babd.0dbc48",
+        "type": "comment",
+        "z": "d8654406.b1e848",
+        "name": "Twilio Calling Notification",
+        "info": "",
+        "x": 130,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6ef1b99d.ab9398",
+        "type": "comment",
+        "z": "d8654406.b1e848",
+        "name": "Sonoff Debug",
+        "info": "",
+        "x": 90,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "fd641c68.5fec4",
+        "type": "debug",
+        "z": "d8654406.b1e848",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 280,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7f2ebb4d.2bfa24",
+        "type": "server-state-changed",
+        "z": "d8654406.b1e848",
+        "name": "Panic Button",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "binary_sensor.switch_158d00010ebb2b",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 90,
+        "y": 740,
+        "wires": [
+            [
+                "1ed4b072.adae3",
+                "20d30999.dcd296"
+            ]
+        ]
+    },
+    {
+        "id": "1ed4b072.adae3",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Twilio Calling - Panic Button",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "twilio",
+        "data": "{   \"message\": \"Maumelle Panic Button has been triggered! Check the cameras. This is not a test. Maumelle Panic Button has been triggered! Check the cameras. This is not a test.\",   \"target\": \"+15017250095\" }",
+        "mergecontext": "",
+        "x": 300,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "20d30999.dcd296",
+        "type": "api-call-service",
+        "z": "d8654406.b1e848",
+        "name": "Slack.Lobby",
+        "server": "6da1f675.6f7518",
+        "service_domain": "notify",
+        "service": "slack",
+        "data": "{   \"data\": {     \"file\": {       \"path\": \"/config/www/images/ha.png\"     }   },   \"message\": \"Maumelle Alarm System!\",   \"title\": \"Alarm has been triggered, Please check the cameras!\" }",
+        "mergecontext": "",
+        "x": 250,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bbe26d98.45277",
+        "type": "server-state-changed",
+        "z": "8351d88f.780408",
+        "name": "Watchdog Checkin Alarm",
+        "server": "6da1f675.6f7518",
+        "entityidfilter": "alarm_control_panel.house",
+        "entityidfiltertype": "exact",
+        "haltifstate": "",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "3cd76a08.d31716"
+            ]
+        ]
+    },
+    {
+        "id": "e448d52c.001b38",
+        "type": "light-scheduler",
+        "z": "8351d88f.780408",
+        "settings": "ac2bb8c7.d54cd8",
+        "events": "[]",
+        "topic": "",
+        "name": "NodeRED Checkin",
+        "onPayload": "OK",
+        "onPayloadType": "str",
+        "offPayload": "OK",
+        "offPayloadType": "str",
+        "onlyWhenDark": false,
+        "sunElevationThreshold": 6,
+        "sunShowElevationInStatus": false,
+        "outputfreq": "output.minutely",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "3bae1aa0.de69a6"
+            ]
+        ]
+    },
+    {
+        "id": "3bae1aa0.de69a6",
+        "type": "api-call-service",
+        "z": "8351d88f.780408",
+        "name": "Toggle Watchdog",
+        "server": "6da1f675.6f7518",
+        "service_domain": "alarm_control_panel.house",
+        "service": "toggle",
+        "data": "{ \"entity_id\": \"alarm_control_panel.house\" }",
+        "mergecontext": "",
+        "x": 470,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    }
+]
