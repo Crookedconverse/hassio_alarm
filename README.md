@@ -22,6 +22,8 @@ This configuration uses the alarm system made by "Gazos Calvertos" with Node-Red
 
 
 #### Make sure to set your own Local IPs on the configuration.yaml file.
+### I've included my Node-Red Flow Configuration in the sub-folder!
+- Twilio Calling, Slack Channel Notification, and Alarm when triggered Sound must be set up within scripts.yaml file.
 #### Alarm Password: Password1
 
 ### Contributor: 
