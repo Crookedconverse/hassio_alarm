@@ -1,12 +1,72 @@
-##########################################################
-## CUSTOM ALARM COMPONENT ALARM.YAML
-## https://github.com/gazoscalvertos/Hass-Custom-Alarm
-## VERSION:  1.0.2
-## MODIFIED: 18/04/18
-## CHANGE LOG:
-## Add Multi Codes, names, pics
-## optional code to arm alarm
-##########################################################
-
 platform: bwalarm
 name: House
+panel:
+  camera_update_interval: ''
+  cameras: []
+  enable_camera_panel: false
+  enable_clock: false
+  enable_clock_12hr: false
+  enable_custom_panel: false
+  enable_floorplan_panel: false
+  enable_sensors_panel: 'True'
+  enable_serif_font: false
+  enable_weather: false
+  hide_passcode: 'True'
+  panel_title: Your Title
+  shadow_effect: false
+  enable_fahrenheit: 'True'
+  hide_sidebar: true
+states:
+  armed_away:
+    immediate: []
+    delayed:
+    - binary_sensor.door_window_sensor_158d000208e169
+    - binary_sensor.door_window_sensor_158d00020b7c28
+    - binary_sensor.door_window_sensor_158d000245b370
+    - binary_sensor.door_window_sensor_158d00023eb1a1
+    - binary_sensor.door_window_sensor_158d0002394353
+    - binary_sensor.door_window_sensor_158d000245b27d
+    - binary_sensor.door_window_sensor_158d00020b7bc1
+    - binary_sensor.door_window_sensor_158d00020b5564
+    override:
+    - binary_sensor.motion_sensor_158d00023db67a
+    - binary_sensor.motion_sensor_158d00023938eb
+    - binary_sensor.motion_sensor_158d000239866f
+    - binary_sensor.motion_sensor_158d00023972e0
+    - binary_sensor.motion_sensor_158d00023d8ac1
+    pending_time: '90'
+    warning_time: '90'
+    trigger_time: '600'
+  armed_home:
+    immediate: []
+    delayed: []
+    override: []
+    pending_time: '90'
+    warning_time: '90'
+    trigger_time: '600'
+  armed_perimeter:
+    immediate: []
+    delayed: []
+    override: []
+    pending_time: 0
+    warning_time: 2
+    trigger_time: 600
+admin_password: HG28!!&dn
+code: '1299'
+enable_perimeter_mode: false
+code_to_arm: true
+themes:
+- name: aaa
+  warning_color: '#995BFF'
+  pending_color: '#FF2943'
+  disarmed_color: '#FF22E6'
+  triggered_color: '#FF0000'
+  armed_home_color: '#C1B1FF'
+  armed_away_color: '#FF8686'
+  armed_perimeter_color: '#DAFF9E'
+  active: false
+  action_button_border_color: '#3ED5FF'
+enable_log: true
+passcode_attempts: '-1'
+passcode_attempts_timeout: '10'
+log_size: '50'
