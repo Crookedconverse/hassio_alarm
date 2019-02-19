@@ -10,27 +10,3 @@
 
 platform: bwalarm
 name: House
-panel:
-  cameras: []
-  hide_passcode: true
-  hide_sidebar: true
-  enable_sensors_panel: true
-states:
-admin_password: Password1
-enable_persistence: true
-code: '0000'
-code_to_arm: true
-log: {log_size: '25'}
-users:
-  user1:
-    enabled: true
-    code: '1111'
-    picture: ''
-  user2:
-    enabled: true
-    code: '2222'
-    picture: ''
-  user3:
-    enabled: true
-    code: '3333'
-    picture: ''
